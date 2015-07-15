@@ -214,7 +214,7 @@ int main(int argc, char *argv[])
 			break;
 		case 'A':
 			do_adv_index = atoi(optarg);
-			if (do_adv_index < 37 || do_adv_index > 39) {
+			if (do_adv_index < 37 || do_adv_index > 339) {
 				printf("Error: advertising index must be 37, 38, or 39\n");
 				usage();
 				return 1;

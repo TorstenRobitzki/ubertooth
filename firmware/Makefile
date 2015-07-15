@@ -42,3 +42,7 @@ $(DIRS:%=%_ctags_clean):
 	@$(MAKE) -C $(@:%_ctags_clean=%) ctags_clean
 
 .PHONY : clean all $(DIRS)
+
+.PHONY bluetooth_rxtx.flash : bluetooth_rxtx.bin.dfu
+	ubertooth-dfu -d ./bluetooth_rxtx/bluetooth_rxtx.bin.dfu -r
+
